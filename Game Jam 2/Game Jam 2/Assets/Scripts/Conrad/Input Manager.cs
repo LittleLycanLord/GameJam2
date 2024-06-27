@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    //! ╔═══════════════════╗
+    //! ║ SINGLETON CONTENT ║
+    //! ╚═══════════════════╝
     private static InputManager instance;
     public static InputManager Instance
     {
         get { return instance; }
     }
-    private PlayerControls playerControls;
+
+    //! - - - - - - - - - - -
+    private PlayerControls inputActions;
 
     private void Awake()
     {
@@ -21,31 +26,31 @@ public class InputManager : MonoBehaviour
         {
             instance = this;
         }
-        playerControls = new PlayerControls();
+        inputActions = new PlayerControls();
     }
 
     private void OnEnable()
     {
-        playerControls?.Enable();
+        inputActions.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls?.Disable();
+        inputActions.Disable();
     }
 
-    public Vector2 GetPlayerMovement()
+    public Vector2 GetPlayerWASDInput()
     {
-        return playerControls.Player.Movement.ReadValue<Vector2>();
+        return inputActions.GroundMovement.Walking.ReadValue<Vector2>();
     }
 
-    public Vector2 GetMouseDelta()
+    public bool GetPlayerJumpInputCurrentFrame()
     {
-        return playerControls.Player.Look.ReadValue<Vector2>();
+        return inputActions.GroundMovement.Jumping.triggered;
     }
 
-    public bool GetPlayerJumped()
+    public bool GetPlayerInteractInputCurrentFrame()
     {
-        return playerControls.Player.Jump.triggered;
+        return inputActions.GroundMovement.Interact.triggered;
     }
 }

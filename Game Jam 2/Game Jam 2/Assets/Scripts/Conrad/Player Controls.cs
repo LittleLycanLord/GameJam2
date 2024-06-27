@@ -24,32 +24,32 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     ""name"": ""Player Controls"",
     ""maps"": [
         {
-            ""name"": ""Player"",
-            ""id"": ""31be694f-e6a9-4f46-a97b-2de593a91ce9"",
+            ""name"": ""Ground Movement"",
+            ""id"": ""529eaa2c-d8c4-4565-9b7e-83c8efeb65ac"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Walking"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""7648eaa0-1d18-4296-ada4-e16fbfe87288"",
+                    ""id"": ""1025472b-3a43-4ec2-9d73-88b35e226387"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""Jumping"",
                     ""type"": ""Button"",
-                    ""id"": ""8c6f83e0-6ee0-4ca2-be20-66e97744e901"",
+                    ""id"": ""0863eb83-780b-427f-8dc2-aad9cc20d106"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""45bf89e3-9c51-473d-96ae-c066546c051d"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4466a5b-9a47-4d21-b689-b1cdef3780f3"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -57,92 +57,92 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""d63d66f2-5d68-43a5-a771-83489b9a660f"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""823dd0b7-c85e-41ad-86da-5616f65f2d14"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""f23f63f6-750e-4bdd-8aea-41dd677036ce"",
+                    ""name"": ""WASD"",
+                    ""id"": ""58c163db-7356-4eb6-b2b4-9d377d81ea28"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Walking"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""a84a33eb-9c43-4746-9cc8-9f0fb3bdbd25"",
+                    ""id"": ""e30e2ac4-c41f-43be-927e-2b48ed991820"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""178dbb84-49a0-4c71-91ee-671c5e5a1367"",
+                    ""id"": ""ef9ab9d2-eb98-4490-9e0d-1c0dbb35b801"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""8035cf6f-bf5f-42ff-8fe8-a6205a62e21f"",
+                    ""id"": ""2c94aa51-f602-478c-a72b-cac09cf81b13"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""714d363e-2e53-4551-8ae4-f7812986e3b2"",
+                    ""id"": ""344c4297-3845-4b14-a06f-1cc2f8901262"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5536c24-bf33-4ccb-9c44-23e55d78e497"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jumping"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c17a2818-92d9-41d4-ad1f-b712b6d3b47b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        // Ground Movement
+        m_GroundMovement = asset.FindActionMap("Ground Movement", throwIfNotFound: true);
+        m_GroundMovement_Walking = m_GroundMovement.FindAction("Walking", throwIfNotFound: true);
+        m_GroundMovement_Jumping = m_GroundMovement.FindAction("Jumping", throwIfNotFound: true);
+        m_GroundMovement_Interact = m_GroundMovement.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -201,71 +201,71 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Movement;
-    private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Look;
-    public struct PlayerActions
+    // Ground Movement
+    private readonly InputActionMap m_GroundMovement;
+    private List<IGroundMovementActions> m_GroundMovementActionsCallbackInterfaces = new List<IGroundMovementActions>();
+    private readonly InputAction m_GroundMovement_Walking;
+    private readonly InputAction m_GroundMovement_Jumping;
+    private readonly InputAction m_GroundMovement_Interact;
+    public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
-        public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_Movement;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Look => m_Wrapper.m_Player_Look;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public GroundMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Walking => m_Wrapper.m_GroundMovement_Walking;
+        public InputAction @Jumping => m_Wrapper.m_GroundMovement_Jumping;
+        public InputAction @Interact => m_Wrapper.m_GroundMovement_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerActions instance)
+        public static implicit operator InputActionMap(GroundMovementActions set) { return set.Get(); }
+        public void AddCallbacks(IGroundMovementActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
+            if (instance == null || m_Wrapper.m_GroundMovementActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GroundMovementActionsCallbackInterfaces.Add(instance);
+            @Walking.started += instance.OnWalking;
+            @Walking.performed += instance.OnWalking;
+            @Walking.canceled += instance.OnWalking;
+            @Jumping.started += instance.OnJumping;
+            @Jumping.performed += instance.OnJumping;
+            @Jumping.canceled += instance.OnJumping;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
-        private void UnregisterCallbacks(IPlayerActions instance)
+        private void UnregisterCallbacks(IGroundMovementActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
+            @Walking.started -= instance.OnWalking;
+            @Walking.performed -= instance.OnWalking;
+            @Walking.canceled -= instance.OnWalking;
+            @Jumping.started -= instance.OnJumping;
+            @Jumping.performed -= instance.OnJumping;
+            @Jumping.canceled -= instance.OnJumping;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
-        public void RemoveCallbacks(IPlayerActions instance)
+        public void RemoveCallbacks(IGroundMovementActions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_GroundMovementActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPlayerActions instance)
+        public void SetCallbacks(IGroundMovementActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_GroundMovementActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_GroundMovementActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PlayerActions @Player => new PlayerActions(this);
-    public interface IPlayerActions
+    public GroundMovementActions @GroundMovement => new GroundMovementActions(this);
+    public interface IGroundMovementActions
     {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
+        void OnWalking(InputAction.CallbackContext context);
+        void OnJumping(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

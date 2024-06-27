@@ -7,12 +7,10 @@ public class Teleporter : MonoBehaviour
     [SerializeField]
     Transform targetDestination;
 
-    [SerializeField]
-    GameObject player;
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Teleporting...");
-        player.transform.position = targetDestination.position;
+        Debug.Log("Teleporting " + other.name + " to " + targetDestination.position + "...");
+
+        other.transform.position = targetDestination.position;
     }
 }
