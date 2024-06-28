@@ -18,6 +18,11 @@ public class CharacterMovement : MonoBehaviour
     private float playerSpeed = 2.0f;
 
     [SerializeField]
+    [Range(0.5f, 2.0f)]
+    private float sprintModifier = 1.2f;
+    private float movementModifier = 1.0f;
+
+    [SerializeField]
     private float jumpHeight = 1.0f;
 
     [SerializeField]
@@ -41,7 +46,15 @@ public class CharacterMovement : MonoBehaviour
         }
 
         Vector2 wasd = inputManager.GetPlayerWASDInput();
-        Vector3 move = new Vector3(wasd.x, 0, wasd.y);
+        if (inputManager.GetPlayerSprintInput() > 0.0f && groundedPlayer)
+        {
+            movementModifier = sprintModifier;
+        }
+        else
+        {
+            movementModifier = 1.0f;
+        }
+        Vector3 move = new Vector3(wasd.x * movementModifier, 0, wasd.y * movementModifier);
         // Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
 

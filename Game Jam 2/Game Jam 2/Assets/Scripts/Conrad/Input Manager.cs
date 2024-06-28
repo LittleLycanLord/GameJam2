@@ -44,9 +44,9 @@ public class InputManager : MonoBehaviour
         return inputActions.GroundMovement.Walking.ReadValue<Vector2>();
     }
 
-    public Vector2 GetPlayerSprintInput()
+    public float GetPlayerSprintInput()
     {
-        return inputActions.GroundMovement.Sprinting.ReadValue<Vector2>();
+        return inputActions.GroundMovement.Sprinting.ReadValue<float>();
     }
 
 

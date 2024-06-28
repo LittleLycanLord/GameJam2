@@ -635,6 +635,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3970673901077629721, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+      propertyPath: jumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970673901077629721, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+      propertyPath: playerSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970673901077629721, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+      propertyPath: gravityValue
+      value: -19.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970673901077629721, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+      propertyPath: sprintModifier
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9178163262542542852, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
       propertyPath: m_Name
       value: Top Down Isometric Player
