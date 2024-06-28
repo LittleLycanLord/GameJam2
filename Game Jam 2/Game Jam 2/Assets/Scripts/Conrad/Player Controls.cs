@@ -53,6 +53,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sprinting"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ad683a8a-a5df-4376-b696-bb9d85a5ee77"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""261c55e6-2338-4d3c-912e-481b63d1d9b3"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprinting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +163,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_GroundMovement_Walking = m_GroundMovement.FindAction("Walking", throwIfNotFound: true);
         m_GroundMovement_Jumping = m_GroundMovement.FindAction("Jumping", throwIfNotFound: true);
         m_GroundMovement_Interact = m_GroundMovement.FindAction("Interact", throwIfNotFound: true);
+        m_GroundMovement_Sprinting = m_GroundMovement.FindAction("Sprinting", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +228,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_Walking;
     private readonly InputAction m_GroundMovement_Jumping;
     private readonly InputAction m_GroundMovement_Interact;
+    private readonly InputAction m_GroundMovement_Sprinting;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -214,6 +236,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Walking => m_Wrapper.m_GroundMovement_Walking;
         public InputAction @Jumping => m_Wrapper.m_GroundMovement_Jumping;
         public InputAction @Interact => m_Wrapper.m_GroundMovement_Interact;
+        public InputAction @Sprinting => m_Wrapper.m_GroundMovement_Sprinting;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +255,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Sprinting.started += instance.OnSprinting;
+            @Sprinting.performed += instance.OnSprinting;
+            @Sprinting.canceled += instance.OnSprinting;
         }
 
         private void UnregisterCallbacks(IGroundMovementActions instance)
@@ -245,6 +271,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Sprinting.started -= instance.OnSprinting;
+            @Sprinting.performed -= instance.OnSprinting;
+            @Sprinting.canceled -= instance.OnSprinting;
         }
 
         public void RemoveCallbacks(IGroundMovementActions instance)
@@ -267,5 +296,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnWalking(InputAction.CallbackContext context);
         void OnJumping(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnSprinting(InputAction.CallbackContext context);
     }
 }

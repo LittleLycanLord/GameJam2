@@ -44,6 +44,12 @@ public class InputManager : MonoBehaviour
         return inputActions.GroundMovement.Walking.ReadValue<Vector2>();
     }
 
+    public Vector2 GetPlayerSprintInput()
+    {
+        return inputActions.GroundMovement.Sprinting.ReadValue<Vector2>();
+    }
+
+
     public bool GetPlayerJumpInputCurrentFrame()
     {
         return inputActions.GroundMovement.Jumping.triggered;
