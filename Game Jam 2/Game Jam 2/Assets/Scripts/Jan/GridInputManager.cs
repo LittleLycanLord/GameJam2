@@ -27,7 +27,7 @@ public class GridInputManager : MonoBehaviour
         }
 
         //gridCoords.setFloat("DefaultScale",5);
-        gridCoords = G;
+        //gridCoords = G;
    }
 
    public Vector3 GetSelectedMapPosition()
