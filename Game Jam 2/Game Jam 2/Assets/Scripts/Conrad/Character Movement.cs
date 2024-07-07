@@ -9,7 +9,11 @@ public class CharacterMovement : MonoBehaviour
 
     // Unity Documentation: https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
     private CharacterController controller;
+
     private Animator animator;
+    private bool isJumping;
+    private bool isFalling;
+
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
@@ -43,9 +47,14 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+        animator.SetBool("isGrounded", controller.isGrounded);
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+            isJumping = false;
+            isFalling = false;
         }
 
         Vector2 wasd = inputManager.GetPlayerWASDInput();
@@ -74,7 +83,19 @@ public class CharacterMovement : MonoBehaviour
         // if (Input.GetButtonDown("Jump") && groundedPlayer)
         if (inputManager.GetPlayerJumpInputCurrentFrame() && groundedPlayer)
         {
+            animator.SetBool("isJumping", true);
+            isJumping = true;
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+
+        // Decides if the player is jumping or falling
+        if (!groundedPlayer)
+        {
+            if (isJumping && playerVelocity.y < 0 || playerVelocity.y < -2)
+            {
+                animator.SetBool("isFalling", true);
+                isFalling = true;
+            }
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
