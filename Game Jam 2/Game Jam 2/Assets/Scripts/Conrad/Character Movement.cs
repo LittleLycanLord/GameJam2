@@ -70,7 +70,7 @@ public class CharacterMovement : MonoBehaviour
         }
         Vector3 move = new Vector3(wasd.x * movementModifier, 0, wasd.y * movementModifier);
         // Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        // controller.Move(move * Time.deltaTime * playerSpeed);
         animator.SetFloat("movement", Mathf.Abs(wasd.x) + Mathf.Abs(wasd.y));
 
         // if (move != Vector3.zero)
@@ -99,6 +99,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        controller.Move(((move * playerSpeed) + playerVelocity) * Time.deltaTime);
     }
 }
