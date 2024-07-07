@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarbyBehaviour : MonoBehaviour
+public class KeyCollection : MonoBehaviour
 {
     [SerializeField]
     private int keysNeeded = 3;
 
     [Header("Displays")]
-    [SerializeField]
-    private int keys = 0;
+    public int keys = 0;
 
     [SerializeField]
     private List<GameObject> boxes = new List<GameObject>();
