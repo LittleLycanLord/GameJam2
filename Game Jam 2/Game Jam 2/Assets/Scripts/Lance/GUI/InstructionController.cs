@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InstructionController : MonoBehaviour
 {
-    [SerializeField] private int currentPage;
+    [SerializeField] public int currentPage;
     [SerializeField] private GameObject pageImage1;
     [SerializeField] private GameObject pageImage2;
     [SerializeField] private GameObject pageImage3;
@@ -13,7 +13,8 @@ public class InstructionController : MonoBehaviour
     [SerializeField] private GameObject OkButton;
 
     [SerializeField] private bool enablePageUpdate;
-    private int maxPage = 4;
+
+    public int maxPage = 4;
    
     // Start is called before the first frame update
     void Start()
@@ -74,13 +75,13 @@ public class InstructionController : MonoBehaviour
         if (this.currentPage != this.maxPage)
         {
             this.currentPage++;
-        }
+        }     
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("enablePageUpdate value: " + this.enablePageUpdate);
+        //Debug.Log("enablePageUpdate value: " + this.enablePageUpdate);
         if (this.enablePageUpdate == true)
         {
             this.updatePageSprite();
