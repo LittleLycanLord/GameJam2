@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject InputManager;
+    [SerializeField] private GameObject PauseMenuCanvas;
+    public void OpenPauseMenu()
     {
-        
+        PauseMenuCanvas.SetActive(true);
+        InputManager.SetActive(false);
+        Time.timeScale = 0.0f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ClosePauseMenu()
     {
-        
+        PauseMenuCanvas.SetActive(false);
+        InputManager.SetActive(true);
+        Time.timeScale = 1.0f;
+    }
+
+    private void Start()
+    {
+        PauseMenuCanvas.SetActive(false);
     }
 }

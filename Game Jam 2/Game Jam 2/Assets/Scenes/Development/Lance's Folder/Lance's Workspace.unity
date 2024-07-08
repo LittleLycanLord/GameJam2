@@ -446,7 +446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 351014249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1980294285}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: OpenPauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &351014249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &539889654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,16 +1275,28 @@ PrefabInstance:
       value: Cardboard Box (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.261
+      value: 1.2609253
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.834
+      value: 4.8340006
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1280,15 +1304,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2267476779062652831, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2687,7 +2711,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1760460271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1980294285}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: ClosePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1760460271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2783,6 +2819,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b9d24702b74d949a4beec5c666d994, type: 3}
+--- !u!1 &1980294284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980294286}
+  - component: {fileID: 1980294285}
+  m_Layer: 0
+  m_Name: PauseMenuController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1980294285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980294284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a56f393eb54e34ebfc0b437e6eb6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputManager: {fileID: 2204742180464022649}
+  PauseMenuCanvas: {fileID: 1570676200}
+--- !u!4 &1980294286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980294284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 495.25, y: 251.11256, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020234878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3194,11 @@ MonoBehaviour:
   keysNeeded: 3
   keys: 0
   boxes: []
+--- !u!1 &2204742180464022649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8924468672146642344, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+  m_PrefabInstance: {fileID: 2204742180464022645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7122874436909066326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3197,6 +3284,7 @@ SceneRoots:
   - {fileID: 511840603}
   - {fileID: 1575750385}
   - {fileID: 1315579088}
-  - {fileID: 1377839225}
   - {fileID: 833614334}
+  - {fileID: 1377839225}
   - {fileID: 1865869557}
+  - {fileID: 1980294286}
