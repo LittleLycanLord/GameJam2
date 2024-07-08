@@ -14,7 +14,7 @@ public class InstructionController : MonoBehaviour
 
     [SerializeField] private bool enablePageUpdate;
 
-    public int maxPage = 4;
+    public int maxPage = 5;
    
     // Start is called before the first frame update
     void Start()
@@ -76,6 +76,25 @@ public class InstructionController : MonoBehaviour
         {
             this.currentPage++;
         }     
+    }
+    
+    public void returnToPauseMenu()
+    {
+        if (this.currentPage == this.maxPage)
+        {
+            this.currentPage = 1;
+            this.enablePageUpdate = false;
+        }
+    }
+    
+    public bool checkIfReachedMaxPage()
+    {
+        if (this.currentPage == this.maxPage)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // Update is called once per frame

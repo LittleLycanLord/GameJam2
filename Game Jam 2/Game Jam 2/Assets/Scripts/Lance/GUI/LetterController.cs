@@ -20,7 +20,7 @@ public class LetterController : MonoBehaviour
 
     private void Update()
     {
-        if (instructionController.currentPage == instructionController.maxPage)
+        if (instructionController.currentPage == instructionController.maxPage - 1)
         {
             this.EndButton.SetActive(true);
         }
