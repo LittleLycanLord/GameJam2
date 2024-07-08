@@ -14,12 +14,13 @@ public class InstructionController : MonoBehaviour
 
     [SerializeField] private bool enablePageUpdate;
 
-    public int maxPage = 5;
+    public int maxPage;
    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         this.currentPage = 1;
+        this.maxPage = 5;
         this.pageImage1.SetActive(false);
         this.pageImage2.SetActive(false);
         this.pageImage3.SetActive(false);

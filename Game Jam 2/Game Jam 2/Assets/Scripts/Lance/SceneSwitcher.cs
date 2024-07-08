@@ -22,6 +22,7 @@ public class SceneSwitcher : MonoBehaviour
     public void OnClickBackToTitle()
     {
         SceneManager.LoadScene("Title");
+        Time.timeScale = 1.0f;
     }
 
 }

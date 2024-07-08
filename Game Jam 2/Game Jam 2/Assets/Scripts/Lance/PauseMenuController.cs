@@ -8,6 +8,7 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private GameObject PauseCanvas;
     [SerializeField] private GameObject PauseMainMenu;
     [SerializeField] private GameObject HelpPanelCanvas;
+    [SerializeField] private GameObject LeavePromptPanel;
     [SerializeField] private InstructionController instructionController;
     
     public void OpenPauseMenu()
@@ -42,9 +43,23 @@ public class PauseMenuController : MonoBehaviour
         }
       
     }
+
+    public void OpenLeavePrompt()
+    {
+        LeavePromptPanel.SetActive(true);
+        PauseMainMenu?.SetActive(false);    
+    }
+
+    public void OnClickLeaveNo()
+    {
+        PauseMainMenu.SetActive(true);
+        LeavePromptPanel.SetActive(false);
+    }
+
     private void Start()
     {
         PauseCanvas.SetActive(false);
         HelpPanelCanvas.SetActive(false);
+        LeavePromptPanel.SetActive(false);
     }
 }
