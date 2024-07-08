@@ -13,11 +13,14 @@ public class MotionSensorController : MonoBehaviour
 
     [SerializeField] private bool lightOff;
     
-    [SerializeField] private float mercyThreshold = 1.5f;
+    [SerializeField] private float mercyThreshold = 2.75f;
     [SerializeField] private float mercyTicks;
 
     private bool foundPlayer;
     private bool caughtPlayer;
+
+    private Color yellow;
+    private Color red;
 
     [SerializeField] private Light motionSensorLight;
 
@@ -31,9 +34,24 @@ public class MotionSensorController : MonoBehaviour
         this.caughtPlayer = false; 
    
         this.lightOff = true;
+
+        yellow = new Color(255, 255, 0);
+        red = new Color(255, 0, 0);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void ResetMotionSensor()
+    {
+        this.offTicks = 0.0f;
+        this.onTicks = 0.0f;
+
+        this.mercyTicks = 0.0f;
+        this.foundPlayer = false;
+        this.caughtPlayer = false;
+
+        this.lightOff = true;
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         Debug.Log("Collider detected: " + other.gameObject.name);
         if (other.gameObject.name.Contains("Player") && !this.lightOff) 
@@ -45,9 +63,13 @@ public class MotionSensorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log(other.gameObject.name + " has exited the collider!");
         if (other.gameObject.name.Contains("Player"))
         {
             this.foundPlayer = false;
+            this.caughtPlayer = false;
+            this.mercyTicks = 0;
+            this.motionSensorLight.color = Color.white;
         }
     }
 
@@ -61,12 +83,12 @@ public class MotionSensorController : MonoBehaviour
         {
             if (!caughtPlayer)
             {
-                Debug.Log("entered updatelight collor yellow if!");
-                this.motionSensorLight.color = Color.yellow;
+                //Debug.Log("entered updatelight collor yellow if!");
+                this.motionSensorLight.color = yellow;
             }
             else
             {
-                this.motionSensorLight.color = Color.red;
+                this.motionSensorLight.color = red;
                 Debug.Log("player caught!");
             }
         }
@@ -79,7 +101,7 @@ public class MotionSensorController : MonoBehaviour
             this.offTicks += Time.deltaTime;
             if (this.offTicks >= this.offThreshold)
             {
-                this.motionSensorLight.intensity = 10.0f;
+                this.motionSensorLight.intensity = 20.0f;
                 this.offTicks = 0.0f;
                 this.lightOff = false;
             }
