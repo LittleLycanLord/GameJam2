@@ -16,7 +16,7 @@ public class SceneSwitcher : MonoBehaviour
     }
     public void OnClickFinishIntro()
     {
-        SceneManager.LoadScene("Lance's Workspace");
+        SceneManager.LoadScene("Development");
     }
 
     public void OnClickBackToTitle()
