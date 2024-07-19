@@ -13,6 +13,7 @@ public class BoxBehaviour : MonoBehaviour
     [SerializeField]
     [Range(1.0f, 2.0f)]
     private float maximumOpeningSpeed;
+    private GameObject prefab;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +33,16 @@ public class BoxBehaviour : MonoBehaviour
                 animator.SetTrigger("Open");
                 break;
         }
+    }
+
+    public void SpawnObject(GameObject objectToSpawn)
+    {
+        prefab = objectToSpawn;
+        Instantiate(prefab, transform);
+    }
+
+    public void destroyObject()
+    {
+        Destroy(prefab);
     }
 }
