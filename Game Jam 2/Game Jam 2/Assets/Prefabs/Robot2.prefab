@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2836004475591695743, guid: f432554f564e69242897607d34218939, type: 3}
       propertyPath: m_Name
-      value: PBRCharacter Variant
+      value: Robot2
       objectReference: {fileID: 0}
     - target: {fileID: 2836004475605291061, guid: f432554f564e69242897607d34218939, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -72,7 +72,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 227cb31253c0eed4687287baf97c1d8f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2836004473841745626, guid: f432554f564e69242897607d34218939, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2836004475591695665, guid: f432554f564e69242897607d34218939, type: 3}
     m_AddedGameObjects: []
