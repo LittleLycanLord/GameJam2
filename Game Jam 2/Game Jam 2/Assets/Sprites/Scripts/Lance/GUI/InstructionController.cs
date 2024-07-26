@@ -5,17 +5,29 @@ using UnityEngine;
 
 public class InstructionController : MonoBehaviour
 {
-    [SerializeField] public int currentPage;
-    [SerializeField] private GameObject pageImage1;
-    [SerializeField] private GameObject pageImage2;
-    [SerializeField] private GameObject pageImage3;
-    [SerializeField] private GameObject pageImage4;
-    [SerializeField] private GameObject OkButton;
+    [SerializeField]
+    public int currentPage;
 
-    [SerializeField] private bool enablePageUpdate;
+    [SerializeField]
+    private GameObject pageImage1;
+
+    [SerializeField]
+    private GameObject pageImage2;
+
+    [SerializeField]
+    private GameObject pageImage3;
+
+    [SerializeField]
+    private GameObject pageImage4;
+
+    [SerializeField]
+    private GameObject OkButton;
+
+    [SerializeField]
+    private bool enablePageUpdate;
 
     public int maxPage;
-   
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -76,9 +88,9 @@ public class InstructionController : MonoBehaviour
         if (this.currentPage != this.maxPage)
         {
             this.currentPage++;
-        }     
+        }
     }
-    
+
     public void returnToPauseMenu()
     {
         if (this.currentPage == this.maxPage)
@@ -87,7 +99,7 @@ public class InstructionController : MonoBehaviour
             this.enablePageUpdate = false;
         }
     }
-    
+
     public bool checkIfReachedMaxPage()
     {
         if (this.currentPage == this.maxPage)
@@ -106,6 +118,5 @@ public class InstructionController : MonoBehaviour
         {
             this.updatePageSprite();
         }
-        
     }
 }

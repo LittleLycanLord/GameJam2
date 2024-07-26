@@ -12,6 +12,7 @@ public class BoxSpawner : MonoBehaviour
     //Reference Object (BOX)
     [SerializeField] private GameObject boxObject;
     [SerializeField] private int boxesToSpawn = 9;
+    [SerializeField] KeyCollection player;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class BoxSpawner : MonoBehaviour
             Instantiate(boxObject,randomSlot);
             slots.Remove(randomSlot);
         }
+
+        player.InitializeBoxes();
     }
 
 }
