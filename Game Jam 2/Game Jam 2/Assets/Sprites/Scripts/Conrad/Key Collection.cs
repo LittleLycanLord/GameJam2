@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LilLycanLord_Official;
 using UnityEngine;
 
 public class KeyCollection : MonoBehaviour
@@ -45,7 +46,9 @@ public class KeyCollection : MonoBehaviour
     {
         if (keys >= keysNeeded)
         {
-            Debug.Log("WIN");
+            SceneTransitionManager.Instance.targetSceneName = "Good Ending";
+            SceneTransitionManager.Instance.selectedTransitionName = "Crossfade";
+            SceneTransitionManager.Instance.LoadSceneWithTransition();
         }
     }
 

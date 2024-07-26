@@ -21,13 +21,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.596
+    value: 0.635
   size:
     overrideState: 1
-    value: 1.56
+    value: 1.037
   lumContrib:
     overrideState: 1
-    value: 0.619
+    value: 0.577
 --- !u!114 &-469683057225506033
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -46,7 +46,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 18
+    value: 35.9
   intensityX:
     overrideState: 1
     value: 1
@@ -107,16 +107,16 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.28
+    value: 0.177
   smoothness:
     overrideState: 1
-    value: 0.849
+    value: 1
   roundness:
     overrideState: 1
     value: 1
   rounded:
     overrideState: 1
-    value: 0
+    value: 1
   mask:
     overrideState: 0
     value: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
     value: 16.72
   threshold:
     overrideState: 1
-    value: 1
+    value: 1.39
   softKnee:
     overrideState: 1
     value: 0.5

@@ -26,6 +26,7 @@ namespace LilLycanLord_Official
         public Image Tutorial2;
         public Image Tutorial3;
         public Image Tutorial4;
+        public Image Tutorial5;
 
         //* ╔════════════╗
         //* ║ Attributes ║
@@ -52,10 +53,13 @@ namespace LilLycanLord_Official
             Tutorial2.gameObject.SetActive(false);
             Tutorial3.gameObject.SetActive(false);
             Tutorial4.gameObject.SetActive(false);
+            Tutorial5.gameObject.SetActive(false);
         }
 
         public void ProgressTutorial()
         {
+            if (currentPage >= 6)
+                return;
             currentPage++;
             switch (currentPage)
             {
@@ -69,8 +73,12 @@ namespace LilLycanLord_Official
                     Tutorial4.gameObject.SetActive(true);
                     break;
                 case 5:
-                    currentPage = 1;
-                    Reset();
+                    Tutorial5.gameObject.SetActive(true);
+                    break;
+                case 6:
+                    SceneTransitionManager.Instance.targetSceneName = "Game Proper";
+                    SceneTransitionManager.Instance.selectedTransitionName = "Crossfade";
+                    SceneTransitionManager.Instance.LoadSceneWithTransition();
                     break;
             }
         }

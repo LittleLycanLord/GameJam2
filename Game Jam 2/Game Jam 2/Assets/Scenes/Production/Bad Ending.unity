@@ -449,7 +449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 379521364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1558400993}
+        m_TargetAssemblyTypeName: LilLycanLord_Official.Endings, Assembly-CSharp
+        m_MethodName: ReturnToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &379521364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,7 +1006,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1149788604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1558400993}
+        m_TargetAssemblyTypeName: LilLycanLord_Official.Endings, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1149788604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -26.108068
       objectReference: {fileID: 0}
+    - target: {fileID: 1532925209947129633, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2497532338093375281, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.209312
@@ -1202,6 +1230,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2381165038532165076, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
+    - {fileID: 1532925209947129633, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9178163262542542852, guid: 2d8bc25db1970c24dbaf3a472108f692, type: 3}
@@ -1411,13 +1440,14 @@ GameObject:
   - component: {fileID: 1558400991}
   - component: {fileID: 1558400990}
   - component: {fileID: 1558400989}
+  - component: {fileID: 1558400993}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Bad Ending
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1558400989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,6 +1533,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1558400993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558400988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffb6d6366ab24342b8ab6d24b1a0254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1592623041
 Mesh:
   m_ObjectHideFlags: 0

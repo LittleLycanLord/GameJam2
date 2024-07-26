@@ -180,8 +180,9 @@ GameObject:
   - component: {fileID: 271612458}
   - component: {fileID: 271612457}
   - component: {fileID: 271612456}
+  - component: {fileID: 271612460}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +273,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &271612460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271612455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9351ee4a2f8525c498cadee82f5b0ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &295407365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1423159340135032831, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_Name
+      value: Scene Transition Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046811092108783226, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 230992a8a43b5f24ebe9c81c2346a6a2, type: 3}
 --- !u!1 &562555531
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,8 +428,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562555531}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.033482227, y: -0.24020693, z: 0.008285801, w: -0.97010875}
-  m_LocalPosition: {x: -8.504062, y: 7.585804, z: -20.396832}
+  m_LocalRotation: {x: -0.02514682, y: -0.85927236, z: 0.042612914, w: -0.50911963}
+  m_LocalPosition: {x: 5.4970975, y: 6.1602426, z: 17.398216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -769,7 +839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003103970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271612460}
+        m_TargetAssemblyTypeName: LilLycanLord_Official.MainMenu, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003103970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,7 +971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1042230808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271612460}
+        m_TargetAssemblyTypeName: LilLycanLord_Official.MainMenu, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1042230808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +1022,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042230805}
   m_CullTransparentMesh: 1
+--- !u!1 &1072991527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072991528}
+  - component: {fileID: 1072991529}
+  m_Layer: 0
+  m_Name: Debugging Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072991528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072991527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6929046, y: 11.237821, z: -15.409244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072991529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072991527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56323368f49ff8f4db7cd4654d22c421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugOptions: []
+  debugMode: 1
+  originalLeftOffset: 20
+  originalTopOffset: 20
+  originalWidth: 150
+  originalHeight: 30
+  originalGap: 10
+  optionsPerColumn: 5
 --- !u!1 &1334531159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,3 +1401,5 @@ SceneRoots:
   - {fileID: 1944025503}
   - {fileID: 271612459}
   - {fileID: 1334531162}
+  - {fileID: 295407365}
+  - {fileID: 1072991528}

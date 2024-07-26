@@ -1,46 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using LilLycanLord_Official;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class MotionSensorController : MonoBehaviour
 {
-    [SerializeField] private float offThreshold = 3.0f;
-    [SerializeField] private float offTicks;
+    [SerializeField]
+    private float offThreshold = 3.0f;
 
-    [SerializeField] private float onThreshold = 1.5f;
-    [SerializeField] private float onTicks;
+    [SerializeField]
+    private float offTicks;
 
-    [SerializeField] private bool lightOff;
-    
-    [SerializeField] private float mercyThreshold = 2.75f;
-    [SerializeField] private float mercyTicks;
+    [SerializeField]
+    private float onThreshold = 1.5f;
+
+    [SerializeField]
+    private float onTicks;
+
+    [SerializeField]
+    private bool lightOff;
+
+    [SerializeField]
+    private float mercyThreshold = 2.75f;
+
+    [SerializeField]
+    private float mercyTicks;
 
     private bool foundPlayer;
     private bool caughtPlayer;
 
-    private Color yellow;
-    private Color red;
+    public Color detected;
+    public Color danger;
 
-    [SerializeField] private Light motionSensorLight;
+    [SerializeField]
+    private Light motionSensorLight;
 
     private void Awake()
     {
-        this.offTicks = 0.0f;
-        this.onTicks = 0.0f;
-
-        this.mercyTicks = 0.0f;
-        this.foundPlayer = false;
-        this.caughtPlayer = false; 
-   
-        this.lightOff = true;
-
-        yellow = new Color(255, 255, 0);
-        red = new Color(255, 0, 0);
-    }
-
-    public void ResetMotionSensor()
-    {
+        offThreshold = +Random.Range(1.1f, 8.0f);
+        onThreshold = +Random.Range(1.1f, 8.0f);
         this.offTicks = 0.0f;
         this.onTicks = 0.0f;
 
@@ -54,9 +53,9 @@ public class MotionSensorController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("Collider detected: " + other.gameObject.name);
-        if (other.gameObject.name.Contains("Player") && !this.lightOff) 
+        if (other.gameObject.name.Contains("Player") && !this.lightOff)
         {
-            //Debug.Log("entered motion sensor trigger IF CONDITION!");
+            //Debug.Log("entedanger motion sensor trigger IF CONDITION!");
             this.foundPlayer = true;
         }
     }
@@ -83,13 +82,15 @@ public class MotionSensorController : MonoBehaviour
         {
             if (!caughtPlayer)
             {
-                //Debug.Log("entered updatelight collor yellow if!");
-                this.motionSensorLight.color = yellow;
+                //Debug.Log("entedanger updatelight collor detected if!");
+                this.motionSensorLight.color = detected;
             }
             else
             {
-                this.motionSensorLight.color = red;
-                Debug.Log("player caught!");
+                this.motionSensorLight.color = danger;
+                SceneTransitionManager.Instance.targetSceneName = "Bad Ending";
+                SceneTransitionManager.Instance.selectedTransitionName = "Crossfade";
+                SceneTransitionManager.Instance.LoadSceneWithTransition();
             }
         }
     }
@@ -101,11 +102,10 @@ public class MotionSensorController : MonoBehaviour
             this.offTicks += Time.deltaTime;
             if (this.offTicks >= this.offThreshold)
             {
-                this.motionSensorLight.intensity = 20.0f;
+                this.motionSensorLight.intensity = 2.0f;
                 this.offTicks = 0.0f;
                 this.lightOff = false;
             }
-
         }
     }
 
@@ -119,9 +119,7 @@ public class MotionSensorController : MonoBehaviour
                 this.motionSensorLight.intensity = 0.0f;
                 this.onTicks = 0.0f;
                 this.lightOff = true;
-               
             }
-
         }
     }
 

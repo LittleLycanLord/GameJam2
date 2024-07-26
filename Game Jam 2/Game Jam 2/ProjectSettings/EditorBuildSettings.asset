@@ -6,22 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Development/Lance's Folder/Title.unity
-    guid: edff5e9ea7db79243b465572d70cb847
+    path: Assets/Scenes/Production/Main Menu.unity
+    guid: decdf3003a8a64c4181629a7853a0eff
   - enabled: 1
-    path: Assets/Scenes/Development/Lance's Folder/Intro_Scene.unity
-    guid: b42a28021fd58f94cb8f0cad20118fd1
-  - enabled: 0
-    path: Assets/Scenes/Development/Lance's Folder/Lance's Workspace.unity
-    guid: 294189751a28ac04e8a49f43c145297e
+    path: Assets/Scenes/Production/Tutorial.unity
+    guid: eea8740517f192d4f8eda9fd3149a9e1
   - enabled: 1
-    path: Assets/Scenes/Development/Development.unity
-    guid: e693e3df03b02074abb3a2d2487352ad
+    path: Assets/Scenes/Production/Game Proper.unity
+    guid: 15e018849d695e041ba47e2b857403da
   - enabled: 1
-    path: Assets/Scenes/Development/Lance's Folder/Lose.unity
-    guid: 6bf8f95dcf373da43a296568ac3b144e
+    path: Assets/Scenes/Production/Bad Ending.unity
+    guid: 1862bb937d796d64fab8bc7866cf57a0
   - enabled: 1
-    path: Assets/Scenes/Development/Lance's Folder/Win.unity
-    guid: 32659da9c77a7d64ba360697951c9c2f
+    path: Assets/Scenes/Production/Good Ending.unity
+    guid: bd323751877ef0249910520ffef5de8f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
