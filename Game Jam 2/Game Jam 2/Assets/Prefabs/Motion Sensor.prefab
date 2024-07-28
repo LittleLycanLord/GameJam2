@@ -71,8 +71,8 @@ MonoBehaviour:
   onThreshold: 1.5
   onTicks: 0
   lightOff: 0
-  mercyThreshold: 1.5
-  mercyTicks: 0
+  mercyThreshold: 1
+  mercyTicks: 0.65
   detected: {r: 1, g: 0.6776523, b: 0, a: 0}
   danger: {r: 1, g: 0, b: 0, a: 0}
   motionSensorLight: {fileID: 3580319561893934376}
