@@ -22,13 +22,13 @@ namespace LilLycanLord_Official
         {
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
-            if (instance != null && instance != this)
+            if (instance == null || instance != this)
             {
-                Destroy(this.gameObject);
+                instance = this;
             }
             else
             {
-                instance = this;
+                Destroy(gameObject);
             }
 
             //* - - - - - Non - Singleton Awake Content - - - - -

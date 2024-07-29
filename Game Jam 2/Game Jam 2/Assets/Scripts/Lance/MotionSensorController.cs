@@ -141,6 +141,13 @@ public class MotionSensorController : MonoBehaviour
             if (mercyTicks >= this.mercyThreshold)
             {
                 this.caughtPlayer = true;
+
+                //this.offTicks = 0.0f;
+                //this.onTicks = 0.0f;
+
+                //this.mercyTicks = 0.0f;
+                //this.foundPlayer = false;
+                //this.caughtPlayer = false;
             }
         }
     }
